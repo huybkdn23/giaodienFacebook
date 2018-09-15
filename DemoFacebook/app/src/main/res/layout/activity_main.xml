@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:background="@color/blue"
+    tools:context=".MainActivity">
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imv_fb"
+        android:layout_marginLeft="@dimen/edt_margin_left"
+        android:layout_marginRight="@dimen/edt_margin_right"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="@dimen/edt_margin_bottom"
+        android:background="@drawable/image_facebook"
+        />
+    <!--bo tròn đường viền bằng cách tạo một file mới trong drawable-->
+    <!--và sử dụng thẻ corners để tùy chỉnh bán kính đường tròn ở 4 góc-->
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_below="@+id/imv_fb"
+        android:layout_marginLeft="@dimen/edt_margin_left"
+        android:layout_marginRight="@dimen/edt_margin_right"
+        android:layout_marginTop="@dimen/edt_margin_top"
+        android:layout_marginBottom="@dimen/edt_margin_bottom"
+        android:padding="@dimen/text_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:background="@drawable/edttext"
+        android:hint="@string/hint_email_phone"
+        />
+    <EditText
+        android:layout_below="@id/edt_email"
+        android:id="@+id/edt_pass"
+        android:layout_marginLeft="@dimen/edt_margin_left"
+        android:layout_marginRight="@dimen/edt_margin_right"
+        android:layout_marginTop="@dimen/edt_margin_top"
+        android:layout_marginBottom="@dimen/edt_margin_bottom"
+        android:padding="@dimen/text_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:background="@drawable/edttext"
+        android:hint="@string/hint_pass"
+        />
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_below="@id/edt_pass"
+        android:layout_marginLeft="@dimen/edt_margin_left"
+        android:layout_marginRight="@dimen/edt_margin_right"
+        android:layout_marginTop="@dimen/edt_margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn"
+        android:textColor="#ffffff"
+        android:text="@string/text_login"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <!--sử dụng thẻ <u></u> trong html để gán vào textview-->
+        <!--thẻ <u></u> này có tác dụng gạch chân 1 đoạn văn bản-->
+        <TextView
+            android:id="@+id/btn_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/text_padding"
+            android:text="@string/text_sign_up"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_size_small" />
+
+        <ImageView
+            android:id="@+id/questionm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/edt_margin_bottom"
+            android:layout_marginLeft="@dimen/edt_margin_left"
+            android:layout_marginRight="@dimen/edt_margin_right"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/questionmark" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login"
+        android:layout_marginTop="@dimen/edt_margin_top">
+
+        <RelativeLayout
+            android:id="@+id/rl3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/twitter" />
+
+            <ImageView
+                android:id="@+id/instagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/twitter"
+                android:background="@drawable/instagram" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
